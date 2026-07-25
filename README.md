@@ -1,2 +1,16 @@
 # TaskManagerAPI
-Simple REST API built with ASP.NET Core
+
+Учебный REST API на ASP.NET Core.
+
+## Возможности
+
+- CRUD задач
+- HTTP API
+- JSON
+- Minimal API
+
+## Стек
+
+- ASP.NET Core
+- C#
+- 
