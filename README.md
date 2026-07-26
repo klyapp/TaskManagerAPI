@@ -13,4 +13,3 @@
 
 - ASP.NET Core
 - C#
-- 
