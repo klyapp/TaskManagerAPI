@@ -12,12 +12,14 @@
 
 ## Структура
 
+​```
 TaskManager.Api/
-├── Data/AppDbContext.cs — контекст EF Core
-├── Dtos/ — модели запроса/ответа, отдельно от сущности БД
-├── Endpoints/TaskEndpoints.cs — все роуты CRUD
-├── Models/ — TaskItem + enum статуса
+├── Data/AppDbContext.cs        — контекст EF Core
+├── Dtos/                       — модели запроса/ответа, отдельно от сущности БД
+├── Endpoints/TaskEndpoints.cs  — все роуты CRUD
+├── Models/                     — TaskItem + enum статуса
 └── Program.cs
+​```
 
 
 ## Как запустить
