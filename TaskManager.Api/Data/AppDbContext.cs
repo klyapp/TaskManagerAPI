@@ -17,10 +17,10 @@ public class AppDbContext : DbContext
         {
             entity.HasKey(t => t.Id);
             entity.Property(t => t.Title)
-                  .IsRequired()
-                  .HasMaxLength(200);
+                .IsRequired()
+                .HasMaxLength(200);
             entity.Property(t => t.Description)
-                  .HasMaxLength(1000);
+                .HasMaxLength(1000);
         });
 
         base.OnModelCreating(modelBuilder);

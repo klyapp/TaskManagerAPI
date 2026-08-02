@@ -4,11 +4,9 @@ using TaskManager.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Регистрация сервисов 
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? "Data Source=taskmanager.db"));
+                      ?? "Data Source=taskmanager.db"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -23,14 +21,11 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-//  Автоматическое создание БД при старте (для учебного проекта достаточно)
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
 }
-
-//  Middleware pipeline 
 
 if (app.Environment.IsDevelopment())
 {
@@ -46,6 +41,6 @@ app.UseHttpsRedirection();
 app.MapTaskEndpoints();
 
 app.MapGet("/", () => Results.Redirect("/swagger"))
-   .ExcludeFromDescription();
+    .ExcludeFromDescription();
 
 app.Run();
