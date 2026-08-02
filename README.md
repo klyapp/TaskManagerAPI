@@ -5,7 +5,7 @@
 
 ## Стек
 
-- ASP.NET Core 8, Minimal API
+- ASP.NET Core 10, Minimal API
 - EF Core + SQLite
 - Data Annotations для валидации
 - Swagger (для тестирования эндпоинтов без Postman)
